@@ -6,7 +6,7 @@ import { useFetchGifs } from "../hooks/useFetchGifs"
 export const GifGrid = ({  category }) => {
     // data: images, eso es para renombrar la propiedad data asi que ahora al hacerle referencia se lo hace como images
     // data y loading se estan desestructurando del hook ya que el mismo retorna el state el cual tiene esos datos
-    const {data : images, loading} = useFetchGifs(category)
+    const {data : images, loading} = useFetchGifs(category) // aca es donde se le pasa la categoria al hijo para que pueda hacer la busqueda
 
     // el {loading} es un if ternario reducido
     return(
